@@ -9,7 +9,7 @@ const mysql = require('mysql2');
   //connectionLimit: 10, 
 //});
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'sql6.freesqldatabase.com',
   user: 'sql6689689',
   password: 'b6vGmPASe8',
   database: 'sql6689689',
