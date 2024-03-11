@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Table Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Monospace', monospace;
+        }
+        .table-container {
+            max-height: 500px; /* Set maximum height for the table container */
+            overflow-y: auto; /* Add vertical scrollbar if needed */
+            overflow-x: auto; /* Add horizontal scrollbar if needed */
+        }
+        
+        table {
+            width: 100%; /* Set table width to 100% */
+        }
+        
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-8">Balance Data</h1>
+
+        <div class="table-container">
+            <table class="min-w-full bg-white border border-gray-300 shadow-md rounded-md">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="py-2 px-4 border-b">Transaction Id</th>
+                        <th class="py-2 px-4 border-b">Date</th>
+                        <th class="py-2 px-4 border-b">Income</th>
+                        <th class="py-2 px-4 border-b">Expense</th>
+                        <th class="py-2 px-4 border-b">Total Amount</th>
+                        <th class="py-2 px-4 border-b">Select</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <form action="/userpage/delete" method="post">
+                        <% var i = 0; %>
+                        <% while (i < balance.length) { %>
+                        <!-- Add your data here -->
+                        <tr>
+                            <td class="py-2 px-4 border-b"><%= balance[i].transaction_id %></td>
+                            <td class="py-2 px-4 border-b"><%= balance[i].date %></td>
+                            <td class="py-2 px-4 border-b"><%= balance[i].income %></td>
+                            <td class="py-2 px-4 border-b"><%= balance[i].expense %></td>
+                            <td class="py-2 px-4 border-b"><%= balance[i].total_amount %></td>
+                            <td class="py-2 px-4 border-b"><input type="radio" name="id" value='<%= balance[i].transaction_id %>' required></td>
+                        </tr>
+                        <% i++; %>
+                        <% } %>
+                    
+                </tbody>
+            </table>
+        </div>
+        <center><input type="submit" class="text-blue-900 text-center mt-10 "></center>
+        </form>
+
+</body>
+</html>

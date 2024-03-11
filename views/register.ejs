@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Override Tailwind CSS with custom styles */
+        /* You can add more custom styles as needed */
+        body {
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body class="bg-blue-200 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md max-w-sm w-full">
+       
+        <div id="registerForm" >
+            <h2 class="text-2xl font-bold mb-4 text-center text-blue-600">Register</h2>
+            <form action="/register" method="post">
+                <div class="mb-4">
+                    <label class="block text-blue-600 text-sm font-semibold mb-2" for="registerName">Name</label>
+                    <input class="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-blue-600 text-sm font-semibold mb-2" for="registerEmail">Email</label>
+                    <span class="text-red-500 font-bold text-xs"><% if (typeof msg !== 'undefined') { %>
+                        <%=msg%>
+                    <% } %></span>
+                    <input class="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-blue-600 text-sm font-semibold mb-2" for="registerPhone">Phone Number</label>
+                    <input class="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-blue-600 text-sm font-semibold mb-2" for="registerPassword">Password</label>
+                    <input class="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-blue-600 text-sm font-semibold mb-2" for="registerPassword" >Amount</label>
+                    <input class="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" type="number" id="amount" name="amount" placeholder="Enter your amount" required>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">Register</button>
+            </form>
+            <p class="text-center mt-4">Already have an account? <a href="/login" class="text-blue-600 font-semibold focus:outline-none" onclick="toggleForm()">Login</button></p>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
