@@ -1,12 +1,20 @@
 const mysql = require('mysql2');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '9596802233',
-  database: 'transactions',
+//const connection = mysql.createConnection({
+//  host: 'localhost',
+//  user: 'root',
+ // password: '9596802233',
+ // database: 'transactions',
   //port: 3306,
   //connectionLimit: 10, 
+//});
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'sql6689689',
+  password: 'b6vGmPASe8',
+  database: 'sql6689689',
+  port: 3306,
+  connectionLimit: 10, 
 });
 
 connection.connect((err) => {
