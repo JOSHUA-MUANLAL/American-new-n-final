@@ -10,7 +10,9 @@ const authMiddleware=require('../middleware/authenticate')
 const secret_key="joshua"
 
 router.get("/",(req,res)=>{
-    res.render('home')
+
+   // db.query('Create table if not exists usertable(')
+   res.render('home')
 })
 
 router.get('/login',(req,res)=>{
