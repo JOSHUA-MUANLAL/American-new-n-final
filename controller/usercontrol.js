@@ -11,7 +11,7 @@ const secret_key="joshua"
 
 router.get("/",(req,res)=>{
 
-   db.query('Create table if not exists usertable(name varchar(255),email varchar(255) primary key,phone int,password varchar(255),amount int',(err,result)=>{
+   db.query('Create table if not exists usertable(name varchar(255),email varchar(255) primary key,phone int,password varchar(255),amount int)',(err,result)=>{
     if(err){
         console.log(err,"table exist")
     }
