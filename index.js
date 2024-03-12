@@ -4,6 +4,7 @@ const app=express()
 const path=require('path')
 app.use(express.static('public'));
 app.use(express.json());
+const bcrypt = require('bcryptjs');
 const ejs = require("ejs");
 const viewsPath = path.join(__dirname, 'views'); 
 
