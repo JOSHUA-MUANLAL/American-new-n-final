@@ -5,7 +5,7 @@ const authMiddleware = (req, res, next) => {
   const token =req.cookies.jwt;
 
   if (!token) {
-    return res.status(401).json({ error: 'Access denied. Token is missing' });
+    return res.status(401).json({ error: 're bhai phele toh login krle itni bhi jaldi ky h bhai ' });
   }
 
   try {
