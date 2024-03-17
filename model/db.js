@@ -10,9 +10,9 @@ const mysql = require('mysql2');
 //});
 const connection = mysql.createConnection({
   host: 'sql6.freesqldatabase.com',
-  user: 'sql6689689',
-  password: 'b6vGmPASe8',
-  database: 'sql6689689',
+  user: 'sql6692051',
+  password: '6IYvvjI47q',
+  database: 'sql6692051',
   port: 3306,
   connectionLimit: 10, 
 });
